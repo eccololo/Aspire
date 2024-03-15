@@ -23,5 +23,5 @@ def dashboard(request):
 
 def user_logout(request):
     auth.logout(request)
-    # messages.success(request, "Logout success!")
+    # messages.success(request, "Logout success!") 
     return redirect("view-home")
