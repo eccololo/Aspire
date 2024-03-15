@@ -1,6 +1,5 @@
-from django.contrib.auth.forms import AuthenticationForm, UsernameField
+from django.contrib.auth.forms import AuthenticationForm
 from django_recaptcha.fields import ReCaptchaField
-
 from django import forms
 
 
