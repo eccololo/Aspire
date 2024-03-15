@@ -9,13 +9,3 @@ class UserLoginForm(AuthenticationForm):
         super(UserLoginForm, self).__init__(*args, **kwargs)
 
     captcha = ReCaptchaField()
-
-    # username = UsernameField(widget=forms.TextInput(
-    #     attrs={'class': 'form-control', 'placeholder': '', 'id': 'hello'}))
-    # password = forms.CharField(widget=forms.PasswordInput(
-    #     attrs={
-    #         'class': 'form-control',
-    #         'placeholder': '',
-    #         'id': 'hi',
-    #     }
-# ))
