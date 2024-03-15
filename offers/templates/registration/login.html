@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}SecureUp | Login{% endblock %}
+{% block content %}
+<br />
+<div class="container bg-white shadow-md px-5 pb-3 pt-4 form-layout">
+    <h2 class="text-center">Login In</h2>
+    <br /><br />
+    <form method="POST" autocomplete="off">
+        {% csrf_token %}
+        {{ form.username|as_crispy_field }}
+        <br /><br />
+        {{ form.password|as_crispy_field }}
+        <br /><br />
+        <button type="submit" class="btn btn-info btn-log w-100 p-3 btn-block">Login</button>
+        <br /><br />
+    </form>
+</div>
+{% endblock %}
