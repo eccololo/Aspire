@@ -35,7 +35,12 @@ INSTALLED_APPS = [
     'contacts',
     'crispy_forms', # Forms
     "crispy_bootstrap4", # Forms
+    'django_recaptcha', # reCaptcha
+
 ]
+
+RECAPTCHA_PUBLIC_KEY = '6LcUCZopAAAAAFXo1GPVYreuNXcdec5DAxgi6rlP'
+RECAPTCHA_PRIVATE_KEY = env("RECAPTCHA_PRIVATE_KEY")
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
