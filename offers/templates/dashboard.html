@@ -2,5 +2,20 @@
 {% load static %}
 {% block title %}Aspire - Dashboard{% endblock %} 
 {% block content %}
-<h1>Dashboard</h1>
+
+<nav
+  class="navbar navbar-expand-lg navbar-light bg-white justify-content-center"
+>
+  <a class="navbar-brand main-heading" href="{% url 'view-home' %}"> &nbsp; Aspire </a>
+
+</nav>
+<br /><br />
+<div class="container bg-white shadow-md px-5 pb-3 pt-4 form-layout">
+    <h5>Welcome {{ user }}</h5>
+    <br />
+    <p>This is your dashboard.</p>
+    <br />
+    <a href="{% url 'user-logout' %}" class="btn btn-info navbar-btn" type="button">Logout</a>
+</div>
 {% endblock %}
+
