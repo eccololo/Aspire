@@ -25,6 +25,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin', # Custom Admin Panel Template
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -139,3 +140,6 @@ MEDIA_ROOT = BASE_DIR / 'static/images'
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGOUT_REDIRECT_URL = 'login'
+
+# JAZZMIN Admin Custom Template Configuration Docs
+# https://django-jazzmin.readthedocs.io/configuration/
