@@ -18,12 +18,201 @@
     {% endfor %}
 {% endif %}    
 <br /><br />
-<div class="container bg-white shadow-md px-5 pb-3 pt-4 form-layout">
-    <h5>Welcome {{ user }}</h5>
-    <br />
-    <p>This is your dashboard.</p>
-    <br />
-    <a href="{% url 'user-logout' %}" class="btn btn-info navbar-btn" type="button">Logout</a>
+<div class="container">
+  <div class="row">
+
+    <!-- FIXME: -->
+    <!-- 1. Make that first column with username have a height just till end of its content. -->
+    <div class="col-sm-4 bg-white shadow-md mx-3 px-5 pb-3 pt-4 dashboard-layout-controlls">
+      <h4>Welcome {{ user }}</h4>
+      <br />
+      <p>This is your dashboard.</p>
+      <br />
+      <a href="{% url 'admin:index' %}" class="btn btn-warning" type="button" target="_blank">Admin</a>
+      &nbsp;
+      <a href="{% url 'user-logout' %}" class="btn btn-info" type="button">Logout</a>
+    </div>
+    <div class="col-sm-7 bg-white shadow-md px-5 pb-3 pt-4 dashboard-layout-stats">
+      <h4>Your Account Stats</h4>
+      <br />
+      <p>Here you can check your statistics and data.</p>
+      <br />
+      <!-- Card Job Stats -->
+      <h5>Jobs:</h5>
+      <div class="row">
+        <div class="col-lg-5 col-md-6">
+          <div class="card border-success">
+            <div class="card-body bg-success text-white">
+              <div class="row">
+                <div class="col-3">
+                  <i class="fa-solid fa-briefcase fa-2x"></i>
+                </div>
+                <div class="col-9 text-right">
+                  <h1>25</h1>
+                  <h4 class="dashboard-stats-header">Applied</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-6">
+          <div class="card border-success">
+            <div class="card-body bg-success text-white">
+              <div class="row">
+                <div class="col-3">
+                  <i class="fa-solid fa-briefcase fa-2x"></i>
+                </div>
+                <div class="col-9 text-right">
+                  <h1>15</h1>
+                  <h4 class="dashboard-stats-header">In Progress</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-lg-5 col-md-6">
+          <div class="card border-success">
+            <div class="card-body bg-success text-white">
+              <div class="row">
+                <div class="col-3">
+                  <i class="fa-brands fa-speakap fa-2x"></i>
+                </div>
+                <div class="col-9 text-right">
+                  <h1>5</h1>
+                  <h4 class="dashboard-stats-header">Interview</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-6">
+          <div class="card border-success">
+            <div class="card-body bg-success text-white">
+              <div class="row">
+                <div class="col-3">
+                  <i class="fa-solid fa-handshake fa-2x"></i>
+                </div>
+                <div class="col-9 text-right">
+                  <h1>2</h1>
+                  <h4 class="dashboard-stats-header">Accepted</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END - Card Job Stats -->
+      <br />
+      <!-- Card Contact Stats -->
+      <h5>Contact:</h5>
+      <div class="row">
+        <div class="col-lg-5 col-md-6">
+          <div class="card border-warning">
+            <div class="card-body bg-warning text-white">
+              <div class="row">
+                <div class="col-3">
+                  <i class="fa-solid fa-address-book fa-2x"></i>
+                </div>
+                <div class="col-9 text-right">
+                  <h1>40</h1>
+                  <h4 class="dashboard-stats-header">Contacts</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-6">
+          <div class="card border-warning">
+            <div class="card-body bg-warning text-white">
+              <div class="row">
+                <div class="col-3">
+                  <i class="fa-brands fa-hire-a-helper fa-2x"></i>
+                </div>
+                <div class="col-9 text-right">
+                  <h1>15</h1>
+                  <h4 class="dashboard-stats-header">Recruiters</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <!-- Card Uploads Stats -->
+      <h5>Uploads:</h5>
+      <div class="row">
+        <div class="col-lg-5 col-md-6">
+          <div class="card border-info">
+            <div class="card-body bg-info text-white">
+              <div class="row">
+                <div class="col-3">
+                  <i class="fa-solid fa-file fa-2x"></i>
+                </div>
+                <div class="col-9 text-right">
+                  <h1>15</h1>
+                  <h4 class="dashboard-stats-header">Resumes</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-6">
+          <div class="card border-info">
+            <div class="card-body bg-info text-white">
+              <div class="row">
+                <div class="col-3">
+                  <i class="fa-solid fa-envelope fa-2x"></i>
+                </div>
+                <div class="col-9 text-right">
+                  <h1>15</h1>
+                  <h4 class="dashboard-stats-header">C-Letters</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-6 mt-3">
+          <div class="card border-info">
+            <div class="card-body bg-info text-white">
+              <div class="row">
+                <div class="col-3">
+                  <i class="fa-solid fa-images fa-2x"></i>
+                </div>
+                <div class="col-9 text-right">
+                  <h1>30</h1>
+                  <h4 class="dashboard-stats-header">Photos</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-6 mt-3">
+          <div class="card border-info">
+            <div class="card-body bg-info text-white">
+              <div class="row">
+                <div class="col-3">
+                  <i class="fa-solid fa-file-pdf fa-2x"></i>
+                </div>
+                <div class="col-9 text-right">
+                  <h1>30</h1>
+                  <h4 class="dashboard-stats-header">Assets</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br /><br />
+      <a href="{% url 'view-offers' %}" class="btn btn-info" type="button" target="_blank">Offers</a>
+      &nbsp;
+      <a href="{% url 'view-contacts' %}" class="btn btn-info" type="button" target="_blank">Contacts</a>
+      &nbsp;
+      <a href="#" class="btn btn-info" type="button" target="_blank">Uploads</a>
+    </div>
+  </div>
 </div>
 {% endblock %}
 

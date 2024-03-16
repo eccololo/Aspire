@@ -124,12 +124,28 @@ body.dark h3, body.dark {
 
 .form-layout {
     width: 500px;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 #logo-home {
     height: 100px; 
     width: 100px; 
+    border-radius: 4px;
+}
+
+.dashboard-layout-controlls {
+    border-radius: 4px;
+}
+
+.dashboard-layout-stats {
+    border-radius: 4px;
+}
+
+.dashboard-stats-header {
+    font-size: 14px;
+}
+
+.card {
     border-radius: 4px;
 }
 
