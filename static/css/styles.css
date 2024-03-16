@@ -110,14 +110,6 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
-body.dark, nav {
-    background-color: #292c35;
-}
-
-body.dark h3, body.dark {
-    color: #fff;
-}
-
 .btn {
     border-radius: 4px;
 }
@@ -132,6 +124,8 @@ body.dark h3, body.dark {
     width: 100px; 
     border-radius: 4px;
 }
+
+/* Dashboard  */
 
 .dashboard-layout-controlls {
     border-radius: 4px;
@@ -149,11 +143,25 @@ body.dark h3, body.dark {
     border-radius: 4px;
 }
 
+/* End - Dashboard  */
+
 /* Light / Dark Theme Toggle */
 
 /* TODO:  */
 /* Finish positioning this toggle button and make other elements on website change */
 /* style from light to dark and vice-verca. */
+
+body.dark, nav {
+    background-color: #292c35;
+}
+
+body.dark h3, body.dark {
+    color: #fff;
+}
+
+body.light h3, body.light {
+    color: #000
+}
 
 .checkbox {
     opacity: 0;
@@ -166,6 +174,7 @@ body.dark h3, body.dark {
     height: 26px;
     border-radius: 50px;
     position: relative;
+    top: 12px;
     padding: 5px;
     cursor: pointer;
     display: flex;
